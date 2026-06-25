@@ -1,5 +1,8 @@
 package com.tmh.quizapp;
 
+import com.tmh.quizapp.themes.DefaultFactory;
+import com.tmh.quizapp.themes.LightFactory;
+import com.tmh.quizapp.themes.ThemeManager;
 import com.tmh.quizapp.themes.ThemeTypes;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -32,20 +35,7 @@ public class PrimaryController implements Initializable{
     }
     
     public void changeTheme(ActionEvent e){
-        switch(this.cbThemes.getSelectionModel().getSelectedItem()){
-            case DARK:
-                this.cbThemes.getScene().getRoot().getStylesheets().clear();
-                this.cbThemes.getScene().getRoot().getStylesheets().add(App.class.getResource("dark.css").toExternalForm());
-                break;
-            case LIGHT:
-                                this.cbThemes.getScene().getRoot().getStylesheets().clear();
-                this.cbThemes.getScene().getRoot().getStylesheets().add(App.class.getResource("light.css").toExternalForm());
-                break;
-            default:
-                                this.cbThemes.getScene().getRoot().getStylesheets().clear();
-                this.cbThemes.getScene().getRoot().getStylesheets().add(App.class.getResource("Style.css").toExternalForm());
-                    break;
-        }
+        this.cbThemes.getSelectionModel().getSelectedItem().updateTheme(this.cbThemes.getScene());
     }
 
     
