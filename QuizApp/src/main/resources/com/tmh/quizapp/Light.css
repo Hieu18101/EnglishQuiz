@@ -13,6 +13,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     -fx-background-color: #FFFFFF;
     -fx-alignment-adjust: center;
     -fx-spacing: 15;
+    -fx-padding: 10;
 }
 .Title{
     -fx-font-size: 35;

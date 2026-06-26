@@ -22,6 +22,7 @@ public class ThemeManager {
     }
     
     public static void applyTheme(Scene scene){
+        
         scene.getRoot().getStylesheets().clear();
         scene.getRoot().getStylesheets().add(factory.getStyleSheet());
     }
